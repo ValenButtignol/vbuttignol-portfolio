@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import "../styles/HexBackground.css";
 
 interface Hexagon {
   x: number;
@@ -74,13 +75,7 @@ const HexBackground: React.FC = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  return (
-    <canvas
-      ref={canvasRef}
-      className="fixed top-0 left-0 w-full h-full -z-10"
-      style={{ backgroundColor: "#0b1220", filter: "blur(1px)" }}
-    />
-  );
+  return <canvas ref={canvasRef} className="hex-canvas" />;
 };
 
 export default HexBackground;
