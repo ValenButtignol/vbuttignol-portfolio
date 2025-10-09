@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import "../styles/HexBackground.css";
+import "../styles/hexbackground.css";
 
 interface Hexagon {
   x: number;
@@ -27,7 +27,7 @@ const HexBackground: React.FC = () => {
       x: Math.random() * width,
       y: Math.random() * height,
       size: 20 + Math.random() * 40,
-      speed: 0.2 + Math.random() * 0.3,
+      speed: 0.1 + Math.random() * 0.2,
       opacity: 0.1 + Math.random() * 0.4,
       direction: Math.random() * 2 * Math.PI,
     }));
