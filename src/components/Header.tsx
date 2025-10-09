@@ -1,10 +1,26 @@
+import { useState, useEffect } from 'react';
 import logo from '../assets/logo.svg';
 import '../styles/Header.css';
-//className="fixed top-0 left-0 w-full px-8 py-4 flex justify-between items-center backdrop-blur-sm bg-black/20 z-20"
 
 const Header = () => {
+  const [hide, setHide] = useState(false);
+  let lastScrollY = 0;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY && window.scrollY > 80) {
+        setHide(true); // scrolling down
+      } else {
+        setHide(false); // scrolling up
+      }
+      lastScrollY = window.scrollY;
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="header">
+    <header className={`header${hide ? " header--hidden" : ""}`}>
       <a href="/" className='header-logo'><img src={logo}/></a>
       <nav className="header-nav">
         <a href="/" className="header-link">Home</a>

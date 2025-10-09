@@ -8,10 +8,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(9,25,47, 1);
   backdrop-filter: blur(6px);
   z-index: 20;
+  transition: transform 0.3s ease;
+}
+
+.header--hidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
 }
 
 .header-nav {
@@ -25,32 +30,36 @@
   color: #c9c9ca;
   text-decoration: none;
   transition: color 0.1s ease-in-out;
+  padding: 4px 10px 4px 10px;
 }
 
 .header-link:hover {
-  color: #71E3AC;
+  color: #64ffda;
 }
 
 .header-resume {
-  color: #71E3AC;
+  color: #64ffda;
   padding: 4px 10px 4px 10px;
-  border: 2px solid #71E3AC;
+  border: 1px solid #64ffda;
   text-decoration: none;
 }
 
-.header-resume:hover {
-  transition: 0.1s ease-in-out;;
-  transform: translate(-3px, -3px);
-  filter: drop-shadow(3px 3px 3px #71E3AC);
+.header-resume:hover  {
+  transition: 0.1s ease-in-out;  
+  text-shadow: 0px 0px 5px #64ffda;
+  box-shadow: 0px 0px 5px #64ffda;
+  background: rgba(110, 249, 253, 0.2);
+} 
+
+.header-logo:hover {
+  transition: 0.1s ease-in-out;
+  filter: drop-shadow(0px 0px 5px #64ffda);
 } 
 
 .header-logo {
+  height: 45px;
+  width: 45px;
+  padding: 4px 10px 4px 10px;
   display: inline-block;
   cursor: pointer;
-}
-
-.header-logo:hover {
-  transition: 0.1s ease-in-out;;
-  transform: translate(-3px, -3px);
-  filter: drop-shadow(3px 3px 3px #71E3AC);
 }
