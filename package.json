@@ -1,8 +1,7 @@
 {
-  "name": "valenbuttignol.github.io",
+  "name": "vbuttignol-portfolio",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://valenbuttignol.github.io/",
   "type": "module",
   "scripts": {
     "dev": "vite",
