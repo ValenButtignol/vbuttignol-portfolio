@@ -4,3 +4,16 @@ html, body {
   overflow-x: hidden;
   background-color: #09192F;
 }
+
+.lb-font {
+  color: #64ffda;
+}
+
+.gray-font {
+  color: #c9c9ca;
+}
+
+.elegant-font {
+  font-family: 'Comfortaa', 'Courier New', Courier, monospace;
+  color: #ccd6f6;
+}

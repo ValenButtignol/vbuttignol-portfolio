@@ -1,5 +1,5 @@
 .header {
-  font-family: 'Comfortaa';
+  font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
   position: fixed;
   top: 0;
   left: 0;
@@ -29,7 +29,6 @@
 }
 
 .header-link {
-  color: #c9c9ca;
   text-decoration: none;
   transition: color 0.1s ease-in-out;
   padding: 5px 10px 4px 10px;
@@ -44,10 +43,6 @@
   padding: 5px 10px 4px 10px;
   border: 1px solid #64ffda;
   text-decoration: none;
-}
-
-.header-bullet {
-  color: #64ffda;
 }
 
 .header-resume:hover  {
