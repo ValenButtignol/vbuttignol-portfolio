@@ -3,6 +3,7 @@ html, body {
   padding: 0;
   overflow-x: hidden;
   background-color: #09192F;
+  font-family: 'Maven Pro', Arial, Helvetica, sans-serif;
 }
 
 .lb-font {
@@ -13,7 +14,14 @@ html, body {
   color: #c9c9ca;
 }
 
-.elegant-font {
-  font-family: 'Comfortaa', 'Courier New', Courier, monospace;
+.smoothgray-font {
   color: #ccd6f6;
+}
+
+.darkpurple-font {
+  color: #8892b0;
+}
+
+.elegant-font {
+  font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
 }

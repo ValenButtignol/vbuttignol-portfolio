@@ -1,15 +1,17 @@
 import '../index.css';
+import '../styles/introduction.css';
+// import HexSwarm from './HexStack';
 
 const Introduction = () => {
   return (
-    <>
-      <p className="elegant-font">Hi, my name is</p>
-      <h1>Valentin Buttignol</h1>
-      <h2>Software Engineer</h2>
-      <p>JavaScript | Python | Java</p>
-      <p>I specialize in backend development, with a professional experience and strong academic foundation in building reliable, scalable software. I'm passionate about creating clean, efficient solutions and continuously learning new technologies.</p>
+    <div>
+      <p className="gray-font elegant-font">Hi there! My name is</p>
+      <h1 className='lb-font'>Valentin Buttignol</h1>
+      <h2 className="darkpurple-font">and I'm a Software Engineer.</h2>
+      <p className='gray-font'>I specialize in backend development, with a professional experience and strong academic foundation in building reliable, scalable software. I'm passionate about creating clean, efficient solutions and continuously learning new technologies.</p>
       <button>Contact Me</button>
-    </>
+      {/* <HexSwarm/> */}
+    </div>
   )
 }
 
