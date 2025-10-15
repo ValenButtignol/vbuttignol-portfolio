@@ -1,23 +1,36 @@
-h1 {
-  font-size: 72px;
-  margin: 0px;
+.intro-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10% 0px 40px 0px;
+  gap: 40px;
 }
 
-p {
-  width: 750px;
-  font-size: 18px;
-  padding: 10px 0px;
-  margin: 0px;
+.intro-text {
+  max-width: 650px;
+}
+
+.intro-hex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: clamp(1.9rem, 5vw, 3.9rem);
+  margin: 0;
 }
 
 h2 {
-  font-size: 42px;
-  padding: 0px 0px 20px 0px;
-  margin: 0px;
+  font-size: clamp(1.3rem, 3.5vw, 2.6rem);
+  margin: 0 0 20px 0;
 }
 
-div {
-  padding: 50px 20px;
+.intro-text p {
+  width: 100%;
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  margin: 0;
+  padding: 10px 0;
 }
 
 .contact-button {
@@ -27,8 +40,9 @@ div {
   font-weight: bold;
   color: #09192F;
   border-color: #09192F;
-  padding: 10px 20px 10px 20px;
-  margin: 20px;
+  padding: 10px 20px;
+  margin: 40px auto 0 auto;
+  display: block;
   cursor: pointer;
   transition: 0.1s ease-in-out;
 }
@@ -36,7 +50,31 @@ div {
 .contact-button:hover {
   border-color: #64ffda;
   background-color: #09192F;
-  color:#64ffda;
-  transition: 0.1s ease-in-out;
+  color: #64ffda;
   filter: drop-shadow(0px 0px 5px #64ffda);
+}
+
+@media (max-width: 900px) {
+  .intro-container {
+    flex-direction: column;
+    align-items: center;   /* ✅ antes estaba "flex-start" */
+    padding: 80px 30px 10px 30px;
+    text-align: center;    /* ✅ para centrar títulos y párrafos */
+  }
+
+  .intro-text {
+    max-width: 100%;
+  }
+
+  .intro-text p {
+    width: 100%;
+  }
+
+  /* (el botón ya está centrado por default con margin auto) */
+
+  .intro-hex {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 }
