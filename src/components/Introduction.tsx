@@ -1,6 +1,6 @@
 import '../index.css';
 import '../styles/introduction.css';
-// import HexSwarm from './HexStack';
+import HexStack from './HexStack';
 
 const Introduction = () => {
   return (
@@ -9,8 +9,8 @@ const Introduction = () => {
       <h1 className='lb-font'>Valentin Buttignol</h1>
       <h2 className="darkpurple-font">and I'm a Software Engineer.</h2>
       <p className='gray-font'>I specialize in backend development, with a professional experience and strong academic foundation in building reliable, scalable software. I'm passionate about creating clean, efficient solutions and continuously learning new technologies.</p>
-      <button>Contact Me</button>
-      {/* <HexSwarm/> */}
+      <button className='contact-button'>Contact Me &nbsp;  ➤</button>
+      <HexStack/>
     </div>
   )
 }
