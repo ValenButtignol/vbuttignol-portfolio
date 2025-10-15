@@ -1,8 +1,17 @@
+.intro-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 20vh;
+  box-sizing: border-box;
+}
+
 .intro-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10% 0px 40px 0px;
+  padding: 0px 0px 20px 0px;
   gap: 40px;
 }
 
@@ -22,7 +31,7 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(1.3rem, 3.5vw, 2.6rem);
+  font-size: clamp(1.3rem, 3.5vw, 2.7rem);
   margin: 0 0 20px 0;
 }
 
@@ -55,11 +64,15 @@ h2 {
 }
 
 @media (max-width: 900px) {
+  .intro-wrapper {
+    padding-top: 0vh;
+  }
+
   .intro-container {
     flex-direction: column;
-    align-items: center;   /* ✅ antes estaba "flex-start" */
+    align-items: center;
     padding: 80px 30px 10px 30px;
-    text-align: center;    /* ✅ para centrar títulos y párrafos */
+    text-align: center;
   }
 
   .intro-text {
@@ -69,8 +82,6 @@ h2 {
   .intro-text p {
     width: 100%;
   }
-
-  /* (el botón ya está centrado por default con margin auto) */
 
   .intro-hex {
     display: flex;
