@@ -25,3 +25,12 @@ html, body {
 .elegant-font {
   font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
 }
+
+.section-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20vh 0;
+  box-sizing: border-box;
+}

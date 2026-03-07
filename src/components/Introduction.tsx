@@ -4,7 +4,7 @@ import HexStack from './HexStack';
 
 const Introduction = () => {
   return (
-    <div className='intro-wrapper'>
+    <div className='section-wrapper'>
       <div className="intro-container">
         <div className="intro-text">
           <p className="gray-font elegant-font">Hi there! My name is</p>
@@ -12,12 +12,11 @@ const Introduction = () => {
           <h2 className="darkpurple-font">and I'm a Software Engineer.</h2>
           <p className='gray-font'>
             I specialize in backend development, with a professional experience and 
-            strong academic foundation in building reliable, scalable software. I'm 
-            passionate about creating clean, efficient solutions and continuously 
+            strong academic foundation in building reliable and scalable software. 
+            Passionate about creating clean, efficient solutions and continuously 
             learning new technologies.
           </p>
         </div>
-
         <div className="intro-hex">
           <HexStack />
         </div>

@@ -1,16 +1,30 @@
+import '../styles/about.css';
+import '../index.css'
+import selfpic from '../assets/selfpic.png';
+
 const About = () => {
   return (
-    <>
-      <h2>About me</h2>
-      <p>Hello! my name is Valentin, a passionate software engineer with a devotion for  to creating clean, scalable, and efficient software pieces.</p>
-      <p>My journey into development started in university, where I discovered my passion for backend systems and how they power everything users see. Since then, I've worked on projects ranging from carpooling platforms to AI-assisted testing tools, learning how to design systems that scale and make sense.</p>
-      <p>I enjoy working across the stack, but my heart is in backend development. I seek to become a world-class expert in engineering with clean software design overall, but especifically on topics like distributed systems, AI/ML or cybersecurity. I'm currently helping improve a real-world carpooling app at CityPooling, while continuing to explore these subjects.</p>
-      <p>When I'm not coding, you'll probably find me exploring new tech ideas, reading about system design, or experimenting with AI-driven tools.</p>
-      <div>
-        <h3>Core values</h3>
-        <p>Problem Solver, Team Player, Fast Learner</p>
+    <div className='section-wrapper'>
+      <div className='about-title'>
+        <h2 className='lb-font'>About me</h2>
       </div>
-    </>
+      <div className="about-container">
+        <div className="about-text">
+          <p className='gray-font'>Hello! my name is Valentin, a software engineer with a devotion for creating clean, scalable, and efficient software pieces.</p>
+          <p className='gray-font'>My journey into development started in university, where I discovered my passion for full-stack systems and how they power everything users see.</p>
+          <p className='gray-font'>I enjoy working across the stack, and always push my self to new technologies. I seek to become a world-class expert in engineering with clean software design overall, but especifically on topics like distributed systems, AI/ML or cybersecurity.</p>
+          <div className="core-values">
+            <h3 className='darkpurple-font'>Core values</h3>
+            <p className='smoothgray-font'>Problem Solver, Team Player, Fast Learner</p>
+          </div>
+        </div>
+        <div className="about-photo">
+          <div className="photo-placeholder">
+            <img src={selfpic}></img>
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 
