@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef } from "react";
 import "../styles/hexstack.css";
 
 import * as THREE from 'three';
@@ -10,7 +10,7 @@ const HexStack = () => {
   const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
   
   useEffect(() => {
-    const technologies = ["JavaScript", "TypeScript", "React", "Node.js", "Java"];
+    //const technologies = ["JavaScript", "TypeScript", "React", "Node.js", "Java"];
     if (!containerRef.current) return;
     
     // Scene
