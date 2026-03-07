@@ -10,9 +10,9 @@ const About = () => {
       </div>
       <div className="about-container">
         <div className="about-text">
-          <p className='gray-font'>Hello! my name is Valentin, a software engineer with a devotion for creating clean, scalable, and efficient software pieces.</p>
-          <p className='gray-font'>My journey into development started in university, where I discovered my passion for full-stack systems and how they power everything users see.</p>
-          <p className='gray-font'>I enjoy working across the stack, and always push my self to new technologies. I seek to become a world-class expert in engineering with clean software design overall, but especifically on topics like distributed systems, AI/ML or cybersecurity.</p>
+          <p className='gray-font elegant-font'>Hello! my name is Valentin, a software engineer with a devotion for creating clean, scalable, and efficient software pieces.</p>
+          <p className='gray-font elegant-font' >My journey into development started in university, where I discovered my passion for full-stack systems and how they power everything users see.</p>
+          <p className='gray-font elegant-font'>I enjoy working across the stack, and always push my self to new technologies. I seek to become a world-class expert in engineering with clean software design overall, but especifically on topics like distributed systems, AI/ML or cybersecurity.</p>
           <div className="core-values">
             <h3 className='darkpurple-font'>Core values</h3>
             <p className='smoothgray-font'>Problem Solver, Team Player, Fast Learner</p>

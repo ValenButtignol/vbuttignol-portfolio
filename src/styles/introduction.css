@@ -10,12 +10,6 @@
   max-width: 650px;
 }
 
-.intro-hex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 h1 {
   font-size: clamp(1.9rem, 5vw, 3.9rem);
   margin: 0;

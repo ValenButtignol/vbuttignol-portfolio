@@ -17,9 +17,7 @@ const Introduction = () => {
             learning new technologies.
           </p>
         </div>
-        <div className="intro-hex">
-          <HexStack />
-        </div>
+        <HexStack />
       </div>
       <button className="contact-button">Contact Me &nbsp; ➤</button>
     </div>

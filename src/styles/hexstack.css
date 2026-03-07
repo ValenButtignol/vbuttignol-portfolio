@@ -1,84 +1,59 @@
-.hex-container {
+.hex-stack-container {
   position: relative;
-  width: 300px;
-  height: 300px;
-  margin: auto;
+  width: 50%;
+  height: 50%;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.hexagon {
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+.hex-item {
+  position: absolute;
+  width: 120px;
+  height: 104px;
+  transform: rotateX(55deg) rotateZ(45deg);
+  transition: 0.5s ease;
+}
+
+.hex-item:nth-child(1) { top: 0px; }
+.hex-item:nth-child(2) { top: 35px; }
+.hex-item:nth-child(3) { top: 70px; }
+.hex-item:nth-child(4) { top: 105px; }
+.hex-item:nth-child(5) { top: 140px; }
+
+.hex-shape {
   width: 100%;
   height: 100%;
-  fill: none;
-  stroke: #64ffda;
-  stroke-width: 2;
-  stroke-linejoin: round;
+  background-color: #64ffda;
+  clip-path: polygon(
+    25% 6.7%,
+    75% 6.7%,
+    100% 50%,
+    75% 93.3%,
+    25% 93.3%,
+    0% 50%
+  );
+  transition: background-color 0.6s ease;
 }
 
-.hex-outline {
-  stroke-dasharray: 600;
-  stroke-dashoffset: 600;
-  transition: stroke-dashoffset 2s ease-out;
-  animation: dashPulse 1.8s infinite ease-in-out;
-  filter: drop-shadow(0 0 6px rgba(100, 255, 218, 0.5));
+.hex-item.active .hex-shape {
+  background-color: #987cb5;
 }
 
-.hexagon.animate .hex-outline {
-  stroke-dashoffset: 0;
-}
-
-.dashed {
-  stroke-dasharray: 6;
-  opacity: 0.7;
-  filter: drop-shadow(0 0 3px rgba(100, 255, 218, 0.3));
-}
-
-
-@keyframes dashPulse {
-  0%, 100% {
-    opacity: 0.6;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
-.shadow-layer {
+.hex-label {
   position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.15;
-  transform: scale(1.15);
-  filter: blur(4px);
-}
-
-
-
-/* Etiquetas de tecnologías */
-.tech-labels {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  color: #a0aec0;
-  font-family: "Inter", sans-serif;
-  font-size: 0.9rem;
-  opacity: 0;
-  transition: opacity 0.8s ease, transform 0.8s ease;
-  transform: translateY(10px);
-}
-
-.tech-labels.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.tech-labels span {
-  position: absolute;
-  transition: color 0.3s;
-}
-
-.tech-labels span:hover {
-  color: #6fffb0;
-  cursor: default;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #64ffda;
+  white-space: nowrap;
+  pointer-events: none;
 }
