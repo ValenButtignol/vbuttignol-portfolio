@@ -1,7 +1,14 @@
+import '../styles/about.css';
+import '../index.css'
+
 const Experience = () => {
   return (
     <>
-      <h2>Experience</h2>
+      <div className='section-wrapper'>
+        <div className='section-title'>
+          <h2 className='lb-font bold'>Experience</h2>
+        </div>
+      </div>
       <div>
         <h3>Back-end Programmer</h3>
         <p>Sep 2024 - Present</p>

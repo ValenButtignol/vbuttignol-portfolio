@@ -5,7 +5,7 @@ import selfpic from '../assets/selfpic.png';
 const About = () => {
   return (
     <div className='section-wrapper'>
-      <div className='about-title'>
+      <div className='section-title'>
         <h2 className='lb-font bold'>About me</h2>
       </div>
       <div className="about-container">

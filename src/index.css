@@ -42,3 +42,20 @@ html, body {
 .bold {
   font-weight: bold;
 }
+
+.section-title h2 {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0 0 40px 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.section-title h2::before,
+.section-title h2::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: #64ffda;
+}
