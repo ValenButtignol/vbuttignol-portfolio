@@ -47,14 +47,14 @@
 }
 
 .header-resume:hover  {
-  transition: 0.1s ease-in-out;  
+  transition: 0.3s ease;  
   text-shadow: 0px 0px 5px #64ffda;
   box-shadow: 0px 0px 5px #64ffda;
   background: rgba(110, 249, 253, 0.2);
 } 
 
 .header-logo:hover {
-  transition: 0.1s ease-in-out;
+  transition: 0.3s ease;
   filter: drop-shadow(0px 0px 5px #64ffda);
 } 
 
