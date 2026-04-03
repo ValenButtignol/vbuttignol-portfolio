@@ -9,7 +9,7 @@ const Introduction = () => {
         <div className="intro-text">
           <p className="gray-font elegant-font">Hi there! My name is</p>
           <h1 className='lb-font'>Valentin Buttignol</h1>
-          <h2 className="darkpurple-font">Software Engineer at <span className='smoothpurple-font bold'>ExxonMobil</span>.</h2>
+          <h2 className="darkpurple-font">Full-stack Developer at <span className='smoothpurple-font bold'>ExxonMobil</span>.</h2>
           <p className='gray-font'>
             I design and build clean, reliable full-stack applications, focusing on performance, scalability, and a smooth user experience.          </p>
         </div>
