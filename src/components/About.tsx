@@ -1,9 +1,11 @@
 import '../styles/about.css';
 import '../index.css'
 import selfpic from '../assets/selfpic.png';
+import { Element } from 'react-scroll';
 
 const About = () => {
   return (
+    <Element name="about">
     <div className='section-wrapper'>
       <div className='section-title'>
         <h2 className='lb-font bold'>About me</h2>
@@ -25,6 +27,7 @@ const About = () => {
         </div>
       </div>
     </div>
+    </Element>
   )
 }
 

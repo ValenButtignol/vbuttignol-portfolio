@@ -1,68 +1,324 @@
+/* ==========================================
+   HEADER
+========================================== */
+
 .header {
-  font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0.5rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(9,25,47, 0.8);
-  backdrop-filter: blur(6px);
-  z-index: 20;
-  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.25);
-  transition: transform 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 14px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(9, 25, 47, .78);
+    backdrop-filter: blur(16px);
+
+    z-index: 1000;
+
+    transition: transform .35s ease;
 }
 
 .header--hidden {
-  transform: translateY(-100%);
-  transition: transform 0.3s ease;
+    transform: translateY(-100%);
 }
 
+/* ==========================================
+   LOGO
+========================================== */
+
+.header-logo {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.header-logo img {
+    width: 100%;
+}
+
+.header-logo:hover {
+    filter: drop-shadow(0 0 8px rgba(100,255,218,.6));
+}
+
+/* ==========================================
+   DESKTOP NAV
+========================================== */
+
 .header-nav {
-  display: flex;
-  gap: 1.5rem;
-  font-size: 0.9rem;
-  flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    gap: 28px;
 }
 
 .header-link {
-  text-decoration: none;
-  transition: color 0.1s ease-in-out;
-  padding: 5px 10px 4px 10px;
+
+    position: relative;
+
+    text-decoration: none;
+
+    font-size: .92rem;
+
+    transition: color .25s ease;
 }
 
 .header-link:hover {
-  color: #64ffda;
+    color: #64ffda;
+    cursor: pointer;
+
+}
+
+.header-link::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 0%;
+    height: 2px;
+
+    background: #64ffda;
+
+    transition: width .25s ease;
+}
+
+.header-link:hover::after {
+
+    width: 100%;
+
 }
 
 .header-resume {
-  color: #64ffda;
-  padding: 5px 10px 4px 10px;
-  border: 1px solid #64ffda;
-  text-decoration: none;
-  transition: 0.1s ease-in-out;
+
+    padding: 10px 18px;
+
+    border: 1px solid #64ffda;
+
+    border-radius: 8px;
+
+    color: #64ffda;
+
+    text-decoration: none;
+
+    transition: .25s ease;
 }
 
-.header-resume:hover  {
-  transition: 0.3s ease;  
-  text-shadow: 0px 0px 5px #64ffda;
-  box-shadow: 0px 0px 5px #64ffda;
-  background: rgba(110, 249, 253, 0.2);
-} 
+.header-resume:hover {
 
-.header-logo:hover {
-  transition: 0.3s ease;
-  filter: drop-shadow(0px 0px 5px #64ffda);
-} 
+    background: rgba(100,255,218,.12);
 
-.header-logo {
-  transition: 0.1s ease-in-out;
-  height: 45px;
-  width: 45px;
-  padding: 4px 10px 4px 10px;
-  display: inline-block;
-  cursor: pointer;
+    box-shadow: 0 0 16px rgba(100,255,218,.18);
+
+}
+
+/* ==========================================
+   BURGER
+========================================== */
+
+.burger-button {
+
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    border: none;
+    background: transparent;
+
+    color: #64ffda;
+
+    cursor: pointer;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1100;
+
+}
+
+.burger-button svg{
+
+    transition:.25s ease;
+
+}
+
+.burger-button:hover svg{
+
+    transform:scale(1.08);
+
+}
+
+/* ==========================================
+   OVERLAY
+========================================== */
+
+.mobile-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.45);
+
+    backdrop-filter: blur(3px);
+
+    z-index: 998;
+
+}
+
+/* ==========================================
+   MOBILE MENU
+========================================== */
+
+.mobile-nav {
+
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    width: min(320px, 80vw);
+    height: 70dvh;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(15,23,42,.98),
+            rgba(9,25,47,.98)
+        );
+
+    border-left: 1px solid rgba(255,255,255,.06);
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 90px 32px 32px;
+
+    z-index: 999;
+
+    box-shadow:
+        -10px 0 40px rgba(0,0,0,.35);
+}
+
+.mobile-link {
+
+    text-decoration: none;
+
+    color: #ccd6f6;
+
+    font-size: 1.05rem;
+
+    padding: 16px 0;
+
+    transition: .25s ease;
+
+}
+
+.mobile-link:hover {
+
+    color: #64ffda;
+    transition: .25s ease;
+
+    transform: translateX(8px);
+
+}
+
+.mobile-divider {
+
+    margin: 24px 0;
+
+    height: 1px;
+
+    background: rgba(255,255,255,.08);
+
+}
+
+.mobile-resume {
+
+    width: fit-content;
+
+    padding: 12px 18px;
+
+    border: 1px solid #64ffda;
+
+    border-radius: 10px;
+
+    color: #64ffda;
+
+    text-decoration: none;
+
+    transition: .25s ease;
+
+}
+
+.mobile-resume:hover {
+
+    background: rgba(100,255,218,.12);
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .header{
+
+        padding:16px 20px;
+
+    }
+
+    .header-nav{
+
+        display:none;
+
+    }
+
+    .burger-button{
+
+        display:flex;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .header{
+
+        padding:14px 16px;
+
+    }
+
+    .mobile-nav{
+
+        width:100%;
+
+        padding:90px 28px 28px;
+
+    }
+
+}
+
+.header-link-active {
+  color: #64ffda;
+}
+
+.header-link-active::after {
+  width: 100%;
 }

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import { Element } from "react-scroll";
 
 import "../styles/experience.css";
 import "../index.css";
@@ -92,6 +93,8 @@ export default function Experience() {
   };
 
   return (
+    <Element name="experience">
+
     <section className="section-wrapper">
 
       <div className="section-title">
@@ -240,5 +243,6 @@ export default function Experience() {
       </div>
 
     </section>
+    </Element>
   );
 }
