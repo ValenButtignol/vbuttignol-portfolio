@@ -11,6 +11,7 @@ import { createPortal } from "react-dom";
 const Header = () => {
   const [hide, setHide] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const resumeLink = "https://drive.google.com/file/d/17ptu4h42nAPc2q-FDQd3RdsSoQesmJZY/view?usp=sharing";
 
   const lastScrollY = useRef(0);
 
@@ -39,7 +40,7 @@ const Header = () => {
   };
 
   const navItems = [
-    { label: "Home", to: "hero" },
+    { label: "Home", to: "home" },
     { label: "About", to: "about" },
     { label: "Experience", to: "experience" },
     { label: "Projects", to: "projects" },
@@ -50,7 +51,7 @@ const Header = () => {
     <>
       <header className={`header ${hide ? "header--hidden" : ""}`}>
         <Link
-          to="hero"
+          to="home"
           smooth
           duration={700}
           offset={-70}
@@ -76,7 +77,7 @@ const Header = () => {
           ))}
 
           <a
-            href="https://drive.google.com/file/d/17ptu4h42nAPc2q-FDQd3RdsSoQesmJZY/view?usp=sharing"
+            href={resumeLink}
             target="_blank"
             rel="noopener noreferrer"
             className="header-resume"
@@ -143,7 +144,7 @@ const Header = () => {
                 className="mobile-resume"
                 onClick={closeMenu}
               >
-                Resume ↗
+                Resume
               </a>
             </motion.nav>
           </>
